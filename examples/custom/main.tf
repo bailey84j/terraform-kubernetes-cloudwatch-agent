@@ -26,6 +26,8 @@ provider "kubernetes" {
 module "k8s_cloudwatch_agent" {
   source = "../../"
 
+  eks_cluster_name = local.k8s_cluster_name
+
   name = "different-app-name"
 
   namespace = "different-namespace"

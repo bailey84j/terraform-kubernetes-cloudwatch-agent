@@ -16,31 +16,31 @@ variable "prefix_separator" {
 # Cloudwatch
 ################################################################################
 variable "name" {
-    description = "The name of the cloudwatch deployment"
+  description = "The name of the cloudwatch deployment"
   type        = string
-    default = "cloudwatch"
-  
+  default     = "cloudwatch"
+
 }
 
 variable "namespace" {
-      description = "The name of the cloudwatch deployment"
+  description = "The name of the cloudwatch deployment"
   type        = string
-    default = "kube-system"
-  
+  default     = "kube-system"
+
 }
 
 variable "image_name" {
-      description = "The name of the cloudwatch container image"
+  description = "The name of the cloudwatch container image"
   type        = string
-    default = "cloudwatch-agent"
-  
+  default     = "cloudwatch-agent"
+
 }
 
 variable "image_version" {
-      description = "The name of the cloudwatch container image version"
+  description = "The name of the cloudwatch container image version"
   type        = string
-    default = "1.247349.0b251399"
-  
+  default     = "1.247349.0b251399"
+
 }
 
 ################################################################################
@@ -88,13 +88,13 @@ variable "iam_role_permissions_boundary" {
   type        = string
   default     = null
 }
-
+/*
 variable "iam_role_additional_policies" {
   description = "Additional policies to be added to the IAM role"
   type        = list(string)
   default     = []
 }
-
+*/
 variable "iam_role_tags" {
   description = "A map of additional tags to add to the IAM role created"
   type        = map(string)
@@ -107,5 +107,5 @@ variable "iam_role_tags" {
 
 variable "eks_cluster_name" {
   description = "The name of the target Kubernetes Cluster"
-  type        = string  
+  type        = string
 }

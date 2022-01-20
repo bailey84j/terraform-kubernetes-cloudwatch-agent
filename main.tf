@@ -74,7 +74,7 @@ resource "kubernetes_cluster_role_binding" "this" {
 }
 
 data "template_file" "this" {
-  template = file("${path.module}/cloudwatch/config.tpl")
+  template = file("${path.module}/templates/config.tpl")
   vars = {
     region_name  = data.aws_region.current.name
     cluster_name = data.aws_eks_cluster.target.name
@@ -270,8 +270,7 @@ resource "kubernetes_daemonset" "this" {
 # region aws iam role
 
 locals {
-  iam_role_name     = coalesce(var.iam_role_name, "${var.eks_cluster_name}-${var.name}")
-  policy_arn_prefix = "arn:${data.aws_partition.current.partition}:iam::aws:policy"
+  iam_role_name = coalesce(var.iam_role_name, "${var.eks_cluster_name}-${var.name}")
 }
 # to be updated
 data "aws_iam_policy_document" "assume_role_policy" {
@@ -313,24 +312,24 @@ resource "aws_iam_role" "this" {
     name = "DescribeEC2TagsAndVolumes"
 
     policy = jsonencode({
-    "Version" : "2012-10-17",
-    "Statement" : [
-      {
-        "Effect" : "Allow",
-        "Action" : [
-          "ec2:DescribeTags",
-          "ec2:DescribeVolumes",
-        ]
-        "Resource" : "*"
-      }
-    ]
-  })
+      "Version" : "2012-10-17",
+      "Statement" : [
+        {
+          "Effect" : "Allow",
+          "Action" : [
+            "ec2:DescribeTags",
+            "ec2:DescribeVolumes",
+          ]
+          "Resource" : "*"
+        }
+      ]
+    })
   }
 
   managed_policy_arns = ["arn:${data.aws_partition.current.partition}:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs"]
 
   tags = merge(var.tags, var.iam_role_tags)
-  
+
 }
 
 # endregion aws iam role
