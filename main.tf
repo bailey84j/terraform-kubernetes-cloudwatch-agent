@@ -270,7 +270,7 @@ resource "kubernetes_daemonset" "this" {
 # region aws iam role
 
 locals {
-  iam_role_name     = coalesce(var.iam_role_name, "${var.eks_cluster_name}-${var.name}")
+  iam_role_name = coalesce(var.iam_role_name, "${var.eks_cluster_name}-${var.name}")
 }
 # to be updated
 data "aws_iam_policy_document" "assume_role_policy" {

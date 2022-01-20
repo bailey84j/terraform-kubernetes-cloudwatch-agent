@@ -52,13 +52,13 @@ variable "create_iam_role" {
   type        = bool
   default     = true
 }
-/*
+
 variable "iam_role_arn" {
   description = "Existing IAM role ARN for the cloudwatch agent. Required if `create_iam_role` is set to `false`"
   type        = string
   default     = null
 }
-*/
+
 variable "iam_role_name" {
   description = "Name to use on IAM role created"
   type        = string
