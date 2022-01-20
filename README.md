@@ -8,7 +8,7 @@ Terraform module which deploys AWS Load Balancer Controller
 
 ## Examples
 
-- [Standard](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/tree/master/examples/standard): Deploying AWS Load Balancer Controller using the default settings
+- [Standard](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/tree/master/examples/standard): Deploying AWS Cloud Watch Agent using the default settings
 - [Custom](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/tree/master/examples/custom): Customising the deployment to use a different name and namespace 
 
 ## Contributing
