@@ -52,13 +52,13 @@ variable "create_iam_role" {
   type        = bool
   default     = true
 }
-
+/*
 variable "iam_role_arn" {
   description = "Existing IAM role ARN for the cloudwatch agent. Required if `create_iam_role` is set to `false`"
   type        = string
   default     = null
 }
-
+*/
 variable "iam_role_name" {
   description = "Name to use on IAM role created"
   type        = string
@@ -88,13 +88,13 @@ variable "iam_role_permissions_boundary" {
   type        = string
   default     = null
 }
-
+/*
 variable "iam_role_additional_policies" {
   description = "Additional policies to be added to the IAM role"
   type        = list(string)
   default     = []
 }
-
+*/
 variable "iam_role_tags" {
   description = "A map of additional tags to add to the IAM role created"
   type        = map(string)

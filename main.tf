@@ -271,7 +271,6 @@ resource "kubernetes_daemonset" "this" {
 
 locals {
   iam_role_name     = coalesce(var.iam_role_name, "${var.eks_cluster_name}-${var.name}")
-  policy_arn_prefix = "arn:${data.aws_partition.current.partition}:iam::aws:policy"
 }
 # to be updated
 data "aws_iam_policy_document" "assume_role_policy" {
