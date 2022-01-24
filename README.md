@@ -64,6 +64,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_create_iam_role"></a> [create\_iam\_role](#input\_create\_iam\_role) | Determines whether a an IAM role is created or to use an existing IAM role for the cloudwatch agent | `bool` | `true` | no |
+| <a name="input_create_namespace"></a> [create\_namespace](#input\_create\_namespace) | Determines whether to create a new kubernetes namespace for the cloudwatch agent deployment | `bool` | `false` | no |
 | <a name="input_eks_cluster_name"></a> [eks\_cluster\_name](#input\_eks\_cluster\_name) | The name of the target Kubernetes Cluster | `string` | n/a | yes |
 | <a name="input_iam_role_arn"></a> [iam\_role\_arn](#input\_iam\_role\_arn) | Existing IAM role ARN for the cloudwatch agent. Required if `create_iam_role` is set to `false` | `string` | `null` | no |
 | <a name="input_iam_role_description"></a> [iam\_role\_description](#input\_iam\_role\_description) | Description of the role | `string` | `"Permissions required by the Kubernetes Cloudwatch to do it's job."` | no |
@@ -75,7 +76,7 @@ No modules.
 | <a name="input_image_name"></a> [image\_name](#input\_image\_name) | The name of the cloudwatch container image | `string` | `"cloudwatch-agent"` | no |
 | <a name="input_image_version"></a> [image\_version](#input\_image\_version) | The name of the cloudwatch container image version | `string` | `"1.247349.0b251399"` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the cloudwatch deployment | `string` | `"cloudwatch"` | no |
-| <a name="input_namespace"></a> [namespace](#input\_namespace) | The name of the cloudwatch deployment | `string` | `"kube-system"` | no |
+| <a name="input_namespace"></a> [namespace](#input\_namespace) | The namespace to put the cloudwatch deployment in | `string` | `"kube-system"` | no |
 | <a name="input_prefix_separator"></a> [prefix\_separator](#input\_prefix\_separator) | The separator to use between the prefix and the generated timestamp for resource names | `string` | `"-"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
