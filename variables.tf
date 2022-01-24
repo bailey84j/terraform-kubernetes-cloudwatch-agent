@@ -22,8 +22,14 @@ variable "name" {
 
 }
 
+variable "create_namespace" {
+  description = "Determines whether to create a new kubernetes namespace for the cloudwatch agent deployment"
+  type        = bool
+  default     = false
+}
+
 variable "namespace" {
-  description = "The name of the cloudwatch deployment"
+  description = "The namespace to put the cloudwatch deployment in"
   type        = string
   default     = "kube-system"
 

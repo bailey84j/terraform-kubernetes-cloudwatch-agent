@@ -42,22 +42,22 @@
 #       with:
 #         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-name: 'Standard-Deployment'
+name: 'Custom-Deployment'
 
 on:
   workflow_dispatch:
 
 jobs:
   terraform:
-    name: 'Standard-Deployment'
+    name: 'Custom-Deployment'
     runs-on: ubuntu-latest
-    environment: Standard-Deployment
+    environment: Custom-Deployment
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
         shell: bash
-        working-directory: examples/standard
+        working-directory: examples/custom
 
     steps:
     # Checkout the repository to the GitHub Actions runner
@@ -104,7 +104,7 @@ jobs:
   # On push to main, build or change infrastructure according to Terraform configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
     - name: Terraform Destroy
-      #if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      #if: always()
       run: terraform destroy -auto-approve        
       env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

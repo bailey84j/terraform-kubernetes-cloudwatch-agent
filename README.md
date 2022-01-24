@@ -2,14 +2,18 @@
 
 Terraform module which deploys AWS Load Balancer Controller
 
-[![Lint Status](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/actions/workflows/main.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/actions/workflows/main.yml)
+[![tflint](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/actions/workflows/tflint.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/actions/workflows/tflint.yml)
 [![LICENSE](https://img.shields.io/github/license/bailey84j/terraform-kubernetes-cloudwatch-agent)](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/blob/master/LICENSE)
+[![Terraform](https://img.shields.io/badge/tf->%3D0.14.8-blue.svg)](https://www.terraform.io/downloads)
+
 
 
 ## Examples
 
-- [Standard](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/tree/master/examples/standard): Deploying AWS Cloud Watch Agent using the default settings
-- [Custom](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/tree/master/examples/custom): Customising the deployment to use a different name and namespace 
+| Example | Description | Status|
+|---------|-------------|-------|
+| [Standard](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/tree/master/examples/standard)| Deploying AWS Cloud Watch Agent using the default settings |[![Standard-Deployment](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/actions/workflows/standard-deployment.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/actions/workflows/standard-deployment.yml) 
+| [Custom](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/tree/master/examples/custom)| Customising the deployment to use a different name and namespace | [![Custom-Deployment](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/actions/workflows/custom-deployment.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/actions/workflows/custom-deployment.yml)
 
 ## Contributing
 
