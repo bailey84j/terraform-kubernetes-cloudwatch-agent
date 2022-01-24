@@ -1,6 +1,6 @@
-# terraform-kubernetes-aws-load-balancer-controller
+# terraform-kubernetes-cloudwatch-agent
 
-Terraform module which deploys AWS Load Balancer Controller
+Terraform module which deploys Kubernetes AWS Cloudwatch Agent
 
 [![tflint](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/actions/workflows/tflint.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/actions/workflows/tflint.yml)
 [![LICENSE](https://img.shields.io/github/license/bailey84j/terraform-kubernetes-cloudwatch-agent)](https://github.com/bailey84j/terraform-kubernetes-cloudwatch-agent/blob/master/LICENSE)
