@@ -53,7 +53,7 @@ jobs:
         uses: terraform-docs/gh-actions@main
         with:
           working-dir: examples/standard
-          output-file: examples/standard/README.md
+          output-file: README.md
           output-method: inject
           git-push: "true"
           git-commit-message: "docs: terraform-docs: automated action - examples/standard"
@@ -62,7 +62,7 @@ jobs:
         uses: terraform-docs/gh-actions@main
         with:
           working-dir: examples/custom
-          output-file: examples/custom/README.md
+          output-file: README.md
           output-method: inject
           git-push: "true"
           git-commit-message: "docs: terraform-docs: automated action - examples/custom"
